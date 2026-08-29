@@ -8,10 +8,6 @@ fi
 echo "Updating system..."
 apt update && apt upgrade -y
 
-echo "1. Configuring Static Ethernet Profile..."
-nmcli connection add con-name static-eth0 ifname eth0 type ethernet ipv4.method manual ipv4.addresses 192.168.144.40/24 ipv4.gateway 192.168.144.1 ipv4.dns "192.168.144.1,8.8.8.8" ipv4.route-metric 50
-
-
 echo "2. Installing Nginx..."
 apt install nginx -y
 
